@@ -21,15 +21,19 @@ I toppen af jeres text editor vil i se alle åbne filer. Normalt kun main.cpp, me
 
 Variabler:
 int. en 32bit integer. Den skrives således:
-int x;
+int x; dette hedder en declaration. Her siger vi "DER ER EN TING VED NAVN x SOM FINDES! DEN ER ET TAL!"
 eller
 int x = 0;
 hvor int er typen, x er navnet og 0 er værdien. I kan også sige x = y, hvis y allerede findes.
 I kan senere ændre værdien af x som i vil. Bare skriv
-x = 1;
+x = 1;  dette hedder en definition. Her siger vi "x ER LIG MED 1!"
 eller endda
 x = x + 1;
 dette er ikke den bedste måde at øge tallet med 1, men mere om det senere...
+note: I må aldrig declare en variabel flere gange. F.eks. må i ikke:
+int x;
+int x = 5;
+dette vil give en fejl. Programmet ved godt selv nu at x er en int.
 
 char. Kan have både tal og tegn som værdi. De betyder det samme.
 I kan skrive
@@ -42,3 +46,35 @@ y = x;
 hvis x er lig 1, er y lig 1 også.
 
 Konsollen:
+for at få konsollen til at skrive noget:
+cout << "din tekst her";
+for at få den til at skrive en ny linje, skriv
+cout << endl;
+for at skrive flere ting på samme linje, skriv
+cout << "din text her" << endl;
+du kan også indsætte variabler
+cout << x << endl;
+
+for at kunne skrive noget i konsollen og lægge det i en variablel, skriv:
+int z;
+cin >> z;
+
+cout står for console output, cin står for console input
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	char x = 'i' //variabel x har værdien i
+	cout << x << endl; //skriver x og går ned på en ny linje. skulle bare vise tegnet i
+	x = 48; //x har nu værdien af element nummer 48 på ascII table: tegnet 0
+
+	int y; //vi siger at der findes en ting ved navn y
+	y = 49; //og y har værdien 49
+	cout << y << endl;
+	cin >> y; //du kan nu skrive en værdi til y
+
+	return 0;
+}
