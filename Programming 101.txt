@@ -1,0 +1,44 @@
+//NSE Programmering 101
+/*
+Disse er comments. Jeres compiler, i dette tilfælde CodeBlocks, vil ignorere alt hvad i skriver her.
+En comment kan starte med //, så er det kun den linje som bliver ignoreret, eller /*, så er det alle linjer indtil i skriver */
+
+/*
+Jeg vil sørge for, at i kan kopiere denne tekst direkte over i jeres compiler, bare for tests.
+Jeg vil prøve at opdatere den med beskrivelser og eksempler senest 24 timer efter hver "lektion", men jeg lover intet da jeg er doven... -.-
+
+ANYWAYS! GUIDES N SHIT!
+
+Nyt projekt:
+Åbn CodeBlocks
+tryk i højre hjørne på File - New - Project
+Vælg Console Application, da det er dem vi arbejder med.
+Sørg for at vælge c++ som sprog og GNU GCC som compiler. (ja, jeg sagde at CodeBlocks er jeres compiler. Det er ikke helt rigtigt, men jeg vil ikke gå i detaljer her.)
+
+For at skifte mellem projekter:
+I højre side ser i jeres projekt markeret med tyk skrift. Dobbeltklik på andre projekter for at gøre dem til det aktive projekt.
+I toppen af jeres text editor vil i se alle åbne filer. Normalt kun main.cpp, men hvis i åbner flere projekter, kan i skifte mellem dem der.
+
+Variabler:
+int. en 32bit integer. Den skrives således:
+int x;
+eller
+int x = 0;
+hvor int er typen, x er navnet og 0 er værdien. I kan også sige x = y, hvis y allerede findes.
+I kan senere ændre værdien af x som i vil. Bare skriv
+x = 1;
+eller endda
+x = x + 1;
+dette er ikke den bedste måde at øge tallet med 1, men mere om det senere...
+
+char. Kan have både tal og tegn som værdi. De betyder det samme.
+I kan skrive
+char y = 1;
+for at give char værdien af det første tegn i ascII table
+eller:
+char y = 'y';
+i kan også skrive at det er lig andre variabler. f.eks
+y = x;
+hvis x er lig 1, er y lig 1 også.
+
+Konsollen:
