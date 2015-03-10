@@ -1,65 +1,106 @@
 //NSE Programmering 101
 /*
-Disse er comments. Jeres compiler, i dette tilfælde CodeBlocks, vil ignorere alt hvad i skriver her.
-En comment kan starte med //, så er det kun den linje som bliver ignoreret, eller /*, så er det alle linjer indtil i skriver */
+Disse er comments. Jeres compiler, i dette tilfÃ¦lde CodeBlocks, vil ignorere alt hvad i skriver her.
+En comment kan starte med //, sÃ¥ er det kun den linje som bliver ignoreret, eller /*, sÃ¥ er det alle linjer indtil i skriver */
 
 /*
-Jeg vil sørge for, at i kan kopiere denne tekst direkte over i jeres compiler, bare for tests.
-Jeg vil prøve at opdatere den med beskrivelser og eksempler senest 24 timer efter hver "lektion", men jeg lover intet da jeg er doven... -.-
+Jeg vil sÃ¸rge for, at i kan kopiere denne tekst direkte over i jeres compiler, bare for tests.
+Jeg vil prÃ¸ve at opdatere den med beskrivelser og eksempler senest 24 timer efter hver "lektion", men jeg lover intet da jeg er doven... -.-
 
 ANYWAYS! GUIDES N SHIT!
 
 Nyt projekt:
-Åbn CodeBlocks
-tryk i højre hjørne på File - New - Project
-Vælg Console Application, da det er dem vi arbejder med.
-Sørg for at vælge c++ som sprog og GNU GCC som compiler. (ja, jeg sagde at CodeBlocks er jeres compiler. Det er ikke helt rigtigt, men jeg vil ikke gå i detaljer her.)
+Ã…bn CodeBlocks
+tryk i hÃ¸jre hjÃ¸rne pÃ¥ File - New - Project
+VÃ¦lg Console Application, da det er dem vi arbejder med.
+SÃ¸rg for at vÃ¦lge c++ som sprog og GNU GCC som compiler. (ja, jeg sagde at CodeBlocks er jeres compiler. Det er ikke helt rigtigt, men jeg vil ikke gÃ¥ i detaljer her.)
 
 For at skifte mellem projekter:
-I højre side ser i jeres projekt markeret med tyk skrift. Dobbeltklik på andre projekter for at gøre dem til det aktive projekt.
-I toppen af jeres text editor vil i se alle åbne filer. Normalt kun main.cpp, men hvis i åbner flere projekter, kan i skifte mellem dem der.
+I hÃ¸jre side ser i jeres projekt markeret med tyk skrift. Dobbeltklik pÃ¥ andre projekter for at gÃ¸re dem til det aktive projekt.
+I toppen af jeres text editor vil i se alle Ã¥bne filer. Normalt kun main.cpp, men hvis i Ã¥bner flere projekter, kan i skifte mellem dem der.
 
 Variabler:
-int. en 32bit integer. Den skrives således:
+int. en 32bit integer. Den skrives sÃ¥ledes:
 int x; dette hedder en declaration. Her siger vi "DER ER EN TING VED NAVN x SOM FINDES! DEN ER ET TAL!"
 eller
 int x = 0;
-hvor int er typen, x er navnet og 0 er værdien. I kan også sige x = y, hvis y allerede findes.
-I kan senere ændre værdien af x som i vil. Bare skriv
+hvor int er typen, x er navnet og 0 er vÃ¦rdien. I kan ogsÃ¥ sige x = y, hvis y allerede findes.
+I kan senere Ã¦ndre vÃ¦rdien af x som i vil. Bare skriv
 x = 1;  dette hedder en definition. Her siger vi "x ER LIG MED 1!"
 eller endda
 x = x + 1;
-dette er ikke den bedste måde at øge tallet med 1, men mere om det senere...
-note: I må aldrig declare en variabel flere gange. F.eks. må i ikke:
+dette er ikke den bedste mÃ¥de at Ã¸ge tallet med 1, men mere om det senere...
+note: I mÃ¥ aldrig declare en variabel flere gange. F.eks. mÃ¥ i ikke:
 int x;
 int x = 5;
 dette vil give en fejl. Programmet ved godt selv nu at x er en int.
 
-char. Kan have både tal og tegn som værdi. De betyder det samme.
+char. Kan have bÃ¥de tal og tegn som vÃ¦rdi. De betyder det samme.
 I kan skrive
 char y = 1;
-for at give char værdien af det første tegn i ascII table
+for at give char vÃ¦rdien af det fÃ¸rste tegn i ascII table
 eller:
 char y = 'y';
-i kan også skrive at det er lig andre variabler. f.eks
+i kan ogsÃ¥ skrive at det er lig andre variabler. f.eks
 y = x;
-hvis x er lig 1, er y lig 1 også.
+hvis x er lig 1, er y lig 1 ogsÃ¥.
+
+bool. Kan vÃ¦re true eller false.
+bool myBool = false;
+
+string. En rÃ¦kke chars. TÃ¦nk pÃ¥ en string som et stykke tekst.
+string myString = "my string!";
 
 Konsollen:
-for at få konsollen til at skrive noget:
+for at fÃ¥ konsollen til at skrive noget:
 cout << "din tekst her";
-for at få den til at skrive en ny linje, skriv
+for at fÃ¥ den til at skrive en ny linje, skriv
 cout << endl;
-for at skrive flere ting på samme linje, skriv
+for at skrive flere ting pÃ¥ samme linje, skriv
 cout << "din text her" << endl;
-du kan også indsætte variabler
+du kan ogsÃ¥ indsÃ¦tte variabler
 cout << x << endl;
 
-for at kunne skrive noget i konsollen og lægge det i en variablel, skriv:
+for at kunne skrive noget i konsollen og lÃ¦gge det i en variablel, skriv:
 int z;
+int a;
 cin >> z;
+Du kan ogsÃ¥ skrive
+cin >> z >> a;
+For at lÃ¦gge input i flere variabler. Dette vil betyde at alt fÃ¸r mellemrum lÃ¦gges i z, og alt efter lÃ¦gges i a.
 
-cout står for console output, cin står for console input
+cout stÃ¥r for console output, cin stÃ¥r for console input
+
+Flow control:
+Flow control er at styre programmet. Dette er f.eks loops og switches.
+
+If/else
+Dette vil kunne fÃ¥ programmet til at gÃ¸re Ã©n ting hvis noget er sandt, og noget andet hvis det er falsk.
+Skrives sÃ¥ledes:
+
+if(statement. F.eks. myBool == false){
+    //gÃ¸r ting
+}
+else //hvis myBool ikke er false
+{
+    //gÃ¸r noget andet
+}
+
+{} hedder en block. Det er svÃ¦rt at forklare hvordan i ved hvornÃ¥r i skal bruge dem. Bare husk at if/else/while og funktion definitions/classes og namespaces generelt bruger dem. Ikke tÃ¦nk over hvad halvdelen af de ord betyder, vi kommer til det.
+
+switch(myChar) //enten en int eller char. I dette tilfÃ¦lde bruger vi igen myChar
+{
+case 'x': //hvis char er lig med tegnet x
+    //gÃ¸r ting
+    break; //break brydder ud af blocken. I dette tilfÃ¦lde betyder det at programmet er fÃ¦rdig med switchen.
+
+case 'y': //hvis det ikke er x men i stedet y
+    //gÃ¸r andre ting
+    break;
+
+default: //hvis ingen af case passer
+    //gÃ¸r noget tredje
+
 */
 
 #include <iostream>
@@ -67,14 +108,14 @@ cout står for console output, cin står for console input
 using namespace std;
 
 int main() {
-	char x = 'i' //variabel x har værdien i
-	cout << x << endl; //skriver x og går ned på en ny linje. skulle bare vise tegnet i
-	x = 48; //x har nu værdien af element nummer 48 på ascII table: tegnet 0
+	char x = 'i' //variabel x har vÃ¦rdien i
+	cout << x << endl; //skriver x og gÃ¥r ned pÃ¥ en ny linje. skulle bare vise tegnet i
+	x = 48; //x har nu vÃ¦rdien af element nummer 48 pÃ¥ ascII table: tegnet 0
 
 	int y; //vi siger at der findes en ting ved navn y
-	y = 49; //og y har værdien 49
+	y = 49; //og y har vÃ¦rdien 49
 	cout << y << endl;
-	cin >> y; //du kan nu skrive en værdi til y
+	cin >> y; //du kan nu skrive en vÃ¦rdi til y
 
 	return 0;
 }
